@@ -2,6 +2,8 @@
 const React = require('react'); //how to work with component
 const ReactDOM = require('react-dom');
 
+import SearchBar from './components/search_bar';
+
 const API_KEY = "AIzaSyCEnfhD7D2nVyX7VM8GXpYom0mYMjJg70o";
 
 /*
@@ -10,7 +12,11 @@ produce HTML
 JSX
 */
 const App = () => {
-    return <div>Hi!!</div>;
+    return (
+        <div>
+            <SearchBar />
+        </div>
+    );
 }
 
 /*
