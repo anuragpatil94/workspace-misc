@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react'; //how to work with component
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
@@ -5,8 +6,6 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 const API_KEY = "AIzaSyCEnfhD7D2nVyX7VM8GXpYom0mYMjJg70o";
-
-
 
 /*
 Create a new component. This component should 
@@ -37,13 +36,16 @@ class App extends Component {
     }
 
     render() {
+        //For throttling Search
+        const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+
         //for VideoList
         //Here we are taking videos data from parent Component 'App' State 
         //and sending its reference to child Component 'VideoList'
         //passing data like this is called passing props
         return (
             <div>
-                <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
+                <SearchBar onSearchTermChange={videoSearch} />
                 <VideoDetail video={this.state.selectedVideo} />
                 <VideoList
                     onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
