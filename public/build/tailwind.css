@@ -625,6 +625,30 @@ video {
   }
 }
 
+/* Apply feature in tailwind might create another type of duplication like this. 
+  but even with apply we duplicated styles in tailwind.css main file for 2 different color buttons
+  To Fix this we create a parent class with all the common styles in this class 
+  Now remove all the classes that are same in individual classes
+  */
+
+.btn {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
 /* Why between components and utilites - 
 Even after using @apply directive here we created a new class and on 
 them we can use utility classes */
@@ -632,27 +656,12 @@ them we can use utility classes */
 /* Compare code here with code created in build/tailwind.css */
 
 .btn-indigo {
-  display: inline-block;
   background-color: #667eea;
   color: #fff;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  font-size: 0.875rem;
 }
 
 .btn-indigo:hover {
   background-color: #7f9cf5;
-}
-
-.btn-indigo:focus {
-  outline: 0;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 .btn-indigo:active {
@@ -660,27 +669,12 @@ them we can use utility classes */
 }
 
 .btn-gray {
-  display: inline-block;
   background-color: #cbd5e0;
   color: #2d3748;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 600;
-  font-size: 0.875rem;
 }
 
 .btn-gray:hover {
   background-color: #e2e8f0;
-}
-
-.btn-gray:focus {
-  outline: 0;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 .btn-gray:active {
