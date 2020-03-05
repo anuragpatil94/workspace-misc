@@ -1,4 +1,32 @@
 /* Tailwind will replace this marker with base styles */
 @tailwind base;
 @tailwind components;
+
+/* Why between components and utilites - 
+Even after using @apply directive here we created a new class and on 
+them we can use utility classes */
+/* Compare code here with code created in build/tailwind.css */
+.btn {
+  @apply inline-block bg-indigo-500 text-white px-4 py-3 rounded-lg uppercase tracking-wider font-semibold text-sm;
+}
+
+.btn:hover {
+  @apply bg-indigo-400;
+}
+
+.btn:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn:active {
+  @apply bg-indigo-600;
+}
+
+/* This we are not going to use everytime so instead we write in html */
+/* @screen sm {
+  .btn {
+    @apply text-base;
+  }
+} */
+
 @tailwind utilities;
