@@ -12,6 +12,10 @@ Based on tailwindcss course
 
 `npx tailwind init` - Create tailwind.config.js file.
 
+#### Tailwinds default config file
+
+`npx tailwind init tailwind-full.config.js --full`
+
 ### PostCSS Config
 
 ```js

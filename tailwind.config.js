@@ -1,7 +1,11 @@
 // Customizing Tailwind
 module.exports = {
   theme: {
-    extend: {}
+    extend: {
+      spacing: {
+        "72": "18rem"
+      }
+    }
   },
   variants: {
     /* Here the order matters, initially active is not part of tailwind.css so we added it. 
