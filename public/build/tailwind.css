@@ -631,7 +631,7 @@ them we can use utility classes */
 
 /* Compare code here with code created in build/tailwind.css */
 
-.btn {
+.btn-indigo {
   display: inline-block;
   background-color: #667eea;
   color: #fff;
@@ -646,17 +646,45 @@ them we can use utility classes */
   font-size: 0.875rem;
 }
 
-.btn:hover {
+.btn-indigo:hover {
   background-color: #7f9cf5;
 }
 
-.btn:focus {
+.btn-indigo:focus {
   outline: 0;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
-.btn:active {
+.btn-indigo:active {
   background-color: #5a67d8;
+}
+
+.btn-gray {
+  display: inline-block;
+  background-color: #cbd5e0;
+  color: #2d3748;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.btn-gray:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-gray:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.btn-gray:active {
+  background-color: #a0aec0;
 }
 
 /* This we are not going to use everytime so instead we write in html */

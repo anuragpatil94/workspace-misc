@@ -6,20 +6,36 @@
 Even after using @apply directive here we created a new class and on 
 them we can use utility classes */
 /* Compare code here with code created in build/tailwind.css */
-.btn {
+.btn-indigo {
   @apply inline-block bg-indigo-500 text-white px-4 py-3 rounded-lg uppercase tracking-wider font-semibold text-sm;
 }
 
-.btn:hover {
+.btn-indigo:hover {
   @apply bg-indigo-400;
 }
 
-.btn:focus {
+.btn-indigo:focus {
   @apply outline-none shadow-outline;
 }
 
-.btn:active {
+.btn-indigo:active {
   @apply bg-indigo-600;
+}
+
+.btn-gray {
+  @apply inline-block bg-gray-400 text-gray-800 px-4 py-3 rounded-lg uppercase tracking-wider font-semibold text-sm;
+}
+
+.btn-gray:hover {
+  @apply bg-gray-300;
+}
+
+.btn-gray:focus {
+  @apply outline-none shadow-outline;
+}
+
+.btn-gray:active {
+  @apply bg-gray-500;
 }
 
 /* This we are not going to use everytime so instead we write in html */
